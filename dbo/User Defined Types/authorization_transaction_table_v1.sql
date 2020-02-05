@@ -1,0 +1,20 @@
+﻿CREATE TYPE [dbo].[authorization_transaction_table_v1] AS TABLE (
+    [authorization_transaction_source_code] CHAR (4)     NOT NULL,
+    [authorization_transaction_source_id]   VARCHAR (32) NOT NULL,
+    [moneris_customer_number]               CHAR (13)    NOT NULL,
+    [device_number]                         CHAR (8)     NULL,
+    [transaction_timestamp]                 BIGINT       NOT NULL,
+    [terminal_date]                         INT          NOT NULL,
+    [terminal_time]                         INT          NULL,
+    [transaction_type_code]                 CHAR (4)     NOT NULL,
+    [transaction_approved_flag]             BIT          NOT NULL,
+    [transaction_currency]                  CHAR (3)     NOT NULL,
+    [transaction_amount]                    BIGINT       NOT NULL,
+    [primary_account_number_prefix]         CHAR (6)     NOT NULL,
+    [primary_account_number_suffix]         CHAR (4)     NOT NULL,
+    [icf]                                   CHAR (24)    NOT NULL,
+    [electronic_commerce_indicator]         CHAR (1)     NULL,
+    [point_of_sale_entry_mode]              CHAR (3)     NULL,
+    [merchant_settlement_currency]          CHAR (3)     NULL,
+    [merchant_settlement_amount]            BIGINT       NULL);
+

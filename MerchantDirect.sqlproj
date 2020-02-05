@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>MerchantDirect</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9a3b29f9-b857-427b-8fdc-2209ad22f641}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>MerchantDirect</RootNamespace>
+    <AssemblyName>MerchantDirect</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="dbo\Sequences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\offlinx_topic_partition_offset.sql" />
+    <Build Include="dbo\Tables\esp_transaction_addendum.sql" />
+    <Build Include="dbo\Tables\segment_type.sql" />
+    <Build Include="dbo\Tables\offlinx_ovrs_revenue_staging.sql" />
+    <Build Include="dbo\Tables\segment.sql" />
+    <Build Include="dbo\Tables\offlinx_ovrs_visit_staging.sql" />
+    <Build Include="dbo\Tables\offlinx_ovrs_attribution_expanded.sql" />
+    <Build Include="dbo\Tables\offlinx_ovrs_visit_expanded.sql" />
+    <Build Include="dbo\Tables\offlinx_ovrs_attribution_expanded_cci.sql" />
+    <Build Include="dbo\Tables\offlinx_transaction_attribution_summary.sql" />
+    <Build Include="dbo\Tables\segment_customer_hierarchy.sql" />
+    <Build Include="dbo\Tables\function_type.sql" />
+    <Build Include="dbo\Tables\authorization_transaction.sql" />
+    <Build Include="dbo\Tables\org_valid_function_type.sql" />
+    <Build Include="dbo\Tables\role_function.sql" />
+    <Build Include="dbo\Tables\portal_user.sql" />
+    <Build Include="dbo\Tables\portal_user_log.sql" />
+    <Build Include="dbo\Tables\authorization_transaction_source.sql" />
+    <Build Include="dbo\Tables\application_user.sql" />
+    <Build Include="dbo\Tables\transaction_type.sql" />
+    <Build Include="dbo\Tables\generic_user.sql" />
+    <Build Include="dbo\Tables\offlinx_transaction_visit_summary.sql" />
+    <Build Include="dbo\Tables\user_org_role.sql" />
+    <Build Include="dbo\Tables\offlinx_device_type.sql" />
+    <Build Include="dbo\Tables\offlinx_channel_type.sql" />
+    <Build Include="dbo\Tables\md_log.sql" />
+    <Build Include="dbo\Tables\offlinx_channel_source.sql" />
+    <Build Include="dbo\Tables\endpoint.sql" />
+    <Build Include="dbo\Tables\offlinx_channel_source_type.sql" />
+    <Build Include="dbo\Tables\endpoint_function_type.sql" />
+    <Build Include="dbo\Tables\offlinx_service.sql" />
+    <Build Include="dbo\Tables\refresh_token.sql" />
+    <Build Include="dbo\Tables\off_1.sql" />
+    <Build Include="dbo\Tables\offlinx_channel_network.sql" />
+    <Build Include="dbo\Tables\offlinx_attribution_model.sql" />
+    <Build Include="dbo\Tables\offlinx_site.sql" />
+    <Build Include="dbo\Tables\offlinx_site_accepted_domain.sql" />
+    <Build Include="dbo\Tables\offlinx_site_rejected_domain.sql" />
+    <Build Include="dbo\Tables\offlinx_site_parameter.sql" />
+    <Build Include="dbo\Tables\offlinx_visit_v2.sql" />
+    <Build Include="dbo\Tables\offlinx_channel.sql" />
+    <Build Include="dbo\Tables\offlinx_channel_rule.sql" />
+    <Build Include="dbo\Tables\offlinx_referrer_source.sql" />
+    <Build Include="dbo\Tables\offlinx_visit.sql" />
+    <Build Include="dbo\Tables\offlinx_attribution_expanded.sql" />
+    <Build Include="dbo\Tables\offlinx_visit_expanded.sql" />
+    <Build Include="dbo\Tables\offlinx_card_match_pool.sql" />
+    <Build Include="dbo\Tables\acquirer_contact.sql" />
+    <Build Include="dbo\Tables\customer_location.sql" />
+    <Build Include="dbo\Tables\offlinx_card_match.sql" />
+    <Build Include="dbo\Tables\offlinx_transaction_card_match.sql" />
+    <Build Include="dbo\Tables\offlinx_visit_trace.sql" />
+    <Build Include="dbo\Tables\acquirer_customer.sql" />
+    <Build Include="dbo\Tables\offlinx_transaction_card_match_ignored.sql" />
+    <Build Include="dbo\Tables\offlinx_transaction_card_match_pool.sql" />
+    <Build Include="dbo\Tables\offlinx_visit_revenue_summary.sql" />
+    <Build Include="dbo\Tables\message.sql" />
+    <Build Include="dbo\Tables\offlinx_revenue_summary.sql" />
+    <Build Include="dbo\Tables\postal_code_location.sql" />
+    <Build Include="dbo\Tables\feature_flags.sql" />
+    <Build Include="dbo\Tables\org_type.sql" />
+    <Build Include="dbo\Tables\org.sql" />
+    <Build Include="dbo\Tables\offlinx_ecommerce_revenue_factor.sql" />
+    <Build Include="dbo\Tables\network_range_group.sql" />
+    <Build Include="dbo\Tables\offlinx_transaction.sql" />
+    <Build Include="dbo\Tables\offlinx_tracking_impression_v3.sql" />
+    <Build Include="dbo\Tables\network_range_entry_ip4.sql" />
+    <Build Include="dbo\Tables\offlinx_attribution.sql" />
+    <Build Include="dbo\Tables\role.sql" />
+    <Build Include="dbo\Tables\offlinx_tracking_impression_summary.sql" />
+    <Build Include="dbo\Views\offlinx_visit_revenue_summary_no_json.sql" />
+    <Build Include="dbo\Views\segment_membership.sql" />
+    <Build Include="Storage\MemoryOpt_FG.sql" />
+    <Build Include="dbo\Functions\part_no_731.sql" />
+    <Build Include="dbo\Functions\part_no_62.sql" />
+    <Build Include="dbo\Stored Procedures\attribute_traced_visit.sql" />
+    <Build Include="dbo\Stored Procedures\calculate_offlinx_transaction_stats.sql" />
+    <Build Include="dbo\Stored Procedures\expand_offlinx_transactions.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_5_temp.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_6.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_attributions.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_new.sql" />
+    <Build Include="dbo\Stored Procedures\offlinx_summarization_check.sql" />
+    <Build Include="dbo\Stored Procedures\generate_offlinx_visit_ids.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_4.sql" />
+    <Build Include="dbo\Stored Procedures\expand_offlinx_attribution.sql" />
+    <Build Include="dbo\Stored Procedures\expand_offlinx_visits_old.sql" />
+    <Build Include="dbo\Stored Procedures\expand_offlinx_visits.sql" />
+    <Build Include="dbo\Stored Procedures\offlinx_transaction_card_match_insert.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_5.sql" />
+    <Build Include="dbo\Stored Procedures\offlinx_transaction_card_match_ignored_insert.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visits.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_2.sql" />
+    <Build Include="dbo\Stored Procedures\offlinx_transaction_card_match_esp.sql" />
+    <Build Include="dbo\Stored Procedures\offlinx_transaction_card_match_tag_hit.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_revenue.sql" />
+    <Build Include="dbo\Stored Procedures\calculate_offlinx_ecommerce_revenue_factor.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_tracking_impression.sql" />
+    <Build Include="dbo\Stored Procedures\summarize_offlinx_visit_revenue_3.sql" />
+    <Build Include="dbo\Stored Procedures\new_offlinx_card_match_tag_hit.sql" />
+    <Build Include="dbo\Stored Procedures\new_offlinx_card_match_esp.sql" />
+    <Build Include="dbo\Stored Procedures\new_offlinx_card_match.sql" />
+    <Build Include="dbo\User Defined Types\authorization_transaction_table_v1.sql" />
+    <Build Include="dbo\User Defined Types\icf_table.sql" />
+    <Build Include="dbo\User Defined Types\offlinx_transaction_table.sql" />
+    <Build Include="dbo\User Defined Types\offlinx_tracking_impression_search.sql" />
+    <Build Include="dbo\User Defined Types\authorization_transaction_table.sql" />
+    <Build Include="Storage\part_no_731.sql" />
+    <Build Include="Storage\part_no_62.sql" />
+    <Build Include="Storage\part_no_731_1.sql" />
+    <Build Include="Storage\part_no_62_1.sql" />
+    <Build Include="dbo\Sequences\offlinx_visit_id.sql" />
+    <Build Include="dbo\Sequences\offlinx_visitor_id.sql" />
+  </ItemGroup>
+</Project>

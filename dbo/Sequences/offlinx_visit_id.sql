@@ -1,0 +1,6 @@
+﻿CREATE SEQUENCE [dbo].[offlinx_visit_id]
+    AS BIGINT
+    START WITH 60000000
+    INCREMENT BY 1
+    CACHE 8000;
+
