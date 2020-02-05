@@ -68,6 +68,7 @@
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\User Defined Types\" />
     <Folder Include="dbo\Sequences\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\offlinx_topic_partition_offset.sql" />
@@ -184,5 +185,6 @@
     <Build Include="Storage\part_no_62_1.sql" />
     <Build Include="dbo\Sequences\offlinx_visit_id.sql" />
     <Build Include="dbo\Sequences\offlinx_visitor_id.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
   </ItemGroup>
 </Project>
